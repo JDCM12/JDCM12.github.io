@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local environments and secrets
+.env
+.env.*
+*.pem
+*.key
+*.token
+credentials/
+secrets/
+
+# Training artifacts that must never enter the public repository
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+checkpoints/
+weights/
+datasets/
+data/private/
+outputs/
+logs/
+
+# Local web/build state
+node_modules/
+dist/
+.next/
+.wrangler/
+.DS_Store
+
+# Temporary review files
+*.tmp
+*.local

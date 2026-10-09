@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Public code for the standard joint pathway in High-Fidelity Song Generation with Joint Discrete and Continuous Modeling."
+    />
+    <title>Public Code · High-Fidelity Song Generation</title>
+    <link rel="stylesheet" href="../demo/styles.css?v=20261009-zh-order" />
+  </head>
+  <body>
+    <div class="page-shell code-page">
+      <header class="topbar">
+        <a class="wordmark" href="../demo/index.html">PUBLIC CODE</a>
+        <span class="status">anonymous supplementary material</span>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="../demo/index.html">Demo</a>
+          <a class="active" href="index.html">Code</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero code-hero">
+          <p class="eyebrow">PUBLIC IMPLEMENTATION</p>
+          <h1>Code for the<br /><em>standard joint pathway.</em></h1>
+          <p class="lede">
+            The public release keeps the full semantic-latent DiT, Qwen
+            hidden-state readout, standalone pretraining, and joint
+            CE&nbsp;+&nbsp;FM training logic explicit.
+          </p>
+        </section>
+
+        <section class="code-notice" aria-label="Release boundary">
+          <span class="label">Release boundary</span>
+          <p>
+            The SSL tokenizer, SSL-VAE implementation, downstream acoustic DiT,
+            LeVo VAE decoder, checkpoints, datasets, and private infrastructure
+            remain replaceable external components.
+          </p>
+        </section>
+
+        <section class="code-notice" aria-label="Complete public code">
+          <span class="label">Complete public code</span>
+          <p>
+            The complete public code for this demo is included in the original
+            <a href="https://github.com/JDCM12/JDCM12.github.io/tree/main/code">demopage repository</a>
+            under <code>code/</code>. The entries below link directly to the
+            main implementation files.
+          </p>
+        </section>
+
+        <section class="code-section">
+          <div class="section-heading">
+            <p class="eyebrow">MAIN ENTRY POINTS</p>
+            <h2>Read the implementation by stage.</h2>
+          </div>
+          <div class="code-grid">
+            <a class="code-card" href="jointc/dit.py">
+              <span class="code-card-kicker">MODEL</span>
+              <h3>Full semantic DiT</h3>
+              <code>jointc/dit.py</code>
+              <p>Sequence-level ID and continuous-condition velocity model.</p>
+            </a>
+            <a class="code-card" href="jointc/model.py">
+              <span class="code-card-kicker">JOINT PATH</span>
+              <h3>Qwen + semantic flow</h3>
+              <code>jointc/model.py</code>
+              <p>Teacher forcing, latent readout, CE&nbsp;+&nbsp;FM loss, and sampling.</p>
+            </a>
+            <a class="code-card" href="jointc/warmup.py">
+              <span class="code-card-kicker">STAGE A</span>
+              <h3>Standalone pretraining</h3>
+              <code>jointc/warmup.py</code>
+              <p>Pretrains the semantic DiT from reference IDs and SSL-VAE targets.</p>
+            </a>
+            <a class="code-card" href="jointc/train.py">
+              <span class="code-card-kicker">STAGE B</span>
+              <h3>Joint semantic training</h3>
+              <code>jointc/train.py</code>
+              <p>Loads the pretrained DiT and trains the planner, readout, and flow.</p>
+            </a>
+            <a class="code-card" href="jointc/infer.py">
+              <span class="code-card-kicker">INFERENCE</span>
+              <h3>Autoregressive generation</h3>
+              <code>jointc/infer.py</code>
+              <p>Samples semantic IDs and integrates the complete semantic flow.</p>
+            </a>
+            <a class="code-card" href="jointc/adapters.py">
+              <span class="code-card-kicker">BOUNDARY</span>
+              <h3>External adapters</h3>
+              <code>jointc/adapters.py</code>
+              <p>Interfaces for the intentionally private representation and audio modules.</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="code-section code-columns">
+          <div class="code-panel">
+            <p class="eyebrow">TRAINING STAGES</p>
+            <h2>Two reproducible entry points.</h2>
+            <div class="command-block">
+              <span>Standalone semantic DiT pretraining</span>
+              <pre><code>PYTHONPATH=code python3 -m jointc.warmup \
+  --data path/to/semantic_latents.jsonl \
+  --output warmup_dit.pt</code></pre>
+            </div>
+            <div class="command-block">
+              <span>Joint semantic training</span>
+              <pre><code>PYTHONPATH=code python3 -m jointc.train \
+  --model-name-or-path Qwen/Qwen2.5-1.5B \
+  --data path/to/jointc.jsonl \
+  --warmup-checkpoint warmup_dit.pt</code></pre>
+            </div>
+          </div>
+          <div class="code-panel">
+            <p class="eyebrow">REPOSITORY FOLDERS</p>
+            <h2>What is included.</h2>
+            <ul class="folder-list">
+              <li><code>code/jointc/</code><span>Public model and training modules</span></li>
+              <li><code>code/tests/</code><span>CPU smoke test and shape checks</span></li>
+              <li><code>configs/</code><span>Anonymous training templates</span></li>
+              <li><code>demo/</code><span>Six-system qualitative audio page</span></li>
+              <li><code>docs/</code><span>Release and anonymity checklists</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="code-footer-link">
+          <a class="back-link" href="../demo/index.html">← Back to audio demo</a>
+        </section>
+      </main>
+
+      <footer>
+        <span>Anonymous supplementary material.</span>
+        <span>No weights, private data, or internal paths are included.</span>
+      </footer>
+    </div>
+  </body>
+</html>

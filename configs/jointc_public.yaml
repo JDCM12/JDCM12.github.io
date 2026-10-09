@@ -1,0 +1,32 @@
+# Public configuration template.
+# Replace the model and data paths in your own environment.
+seed: 1994
+tf32: true
+model_name_or_path: Qwen/Qwen2.5-1.5B
+semantic_vocab_size: 32768
+latent_dim: 96
+condition_dim: 1152
+max_audio_tokens: 8192
+dit_hidden_size: 1152
+dit_depth: 28
+dit_num_heads: 16
+dit_mlp_ratio: 4.0
+dit_cond_drop_prob: 0.1
+activation_checkpointing: true
+ar_gradient_checkpointing: true
+unfreeze_last_backbone_layers: 28
+unfreeze_audio_embedding: true
+d_corrupt_prob: 0.5
+fm_loss_weight: 1.0
+precision: bf16
+sample_vae_target: true
+batch_size: 1
+dit_lr: 0.00005
+ar_lr: 0.00001
+gradient_clip: 1.0
+max_steps: 500000
+
+# The following components are intentionally external:
+# - semantic target provider
+# - continuous-latent renderer
+# - waveform decoder

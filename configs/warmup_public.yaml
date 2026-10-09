@@ -1,0 +1,23 @@
+# Public semantic-latent DiT warmup template.
+# Replace the data path in your own environment.
+stage: warmup
+seed: 1994
+tf32: true
+semantic_vocab_size: 32768
+latent_dim: 96
+max_audio_tokens: 8192
+dit_hidden_size: 1152
+dit_depth: 28
+dit_num_heads: 16
+dit_mlp_ratio: 4.0
+dit_cond_drop_prob: 0.1
+activation_checkpointing: true
+precision: bf16
+sample_vae_target: true
+batch_size: 1
+learning_rate: 0.00005
+gradient_clip: 1.0
+max_steps: 100000
+
+# semantic_ids plus either continuous_targets or vae_mu/vae_logvar are
+# supplied by external, approved SSL-tokenizer / SSL-VAE adapters.

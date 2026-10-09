@@ -1,0 +1,276 @@
+{
+  "title": "High-Fidelity Song Generation with Joint Discrete and Continuous Modeling — qualitative samples",
+  "paper": "High-Fidelity Song Generation with Joint Discrete and Continuous Modeling",
+  "items": [
+    {
+      "id": "en01",
+      "title": "English sample 01",
+      "language": "English",
+      "prompt": "pop, synth-driven with shimmering melodies and a pulsing bassline",
+      "lyrics": "[Verse]\nRobert walked in wearing a crooked grin\nEmma’s eyes lit up like fireworks within\nShe said hey\nDo you know what you’re doing to me\nHe laughed and said I guess we’ll see\n\n[Chorus]\nRobert and Emma\nHearts on fire\nBurning brighter\nClimbing higher\nEvery glance a spark\nEvery word a flame\nTwo souls colliding\nNever the same\n\n[Verse 2]\nThey met at the corner where time stood still\nHer laugh was a song he couldn’t help but feel\nShe said you’re trouble\nHe said you’re right\nBut trouble never felt so light\n\n[Prechorus]\nAnd the world stopped spinning\nJust for a beat\nWhen their hearts found rhythm\nSteady and sweet\n\n[Chorus]\nRobert and Emma\nHearts on fire\nBurning brighter\nClimbing higher\nEvery glance a spark\nEvery word a flame\nTwo souls colliding\nNever the same\n\n[Bridge]\nThey’re dancing in the rain like it’s their last night\nHis hand in hers\nHolding on so tight\nThe city fades\nIt’s just them in the glow\nA love like this\nThe whole world ought to know",
+      "methods": [
+        {
+          "label": "Discrete",
+          "model": "discrete",
+          "file": "assets/audio/en01_discrete.mp3",
+          "description": "VQ lookup baseline"
+        },
+        {
+          "label": "Joint-STD-48D",
+          "model": "joint_std_48d",
+          "file": "assets/audio/en01_joint_std_48d.mp3",
+          "description": "standard pathway · 48D semantic target"
+        },
+        {
+          "label": "Joint-STD-96D",
+          "model": "joint_std_96d",
+          "file": "assets/audio/en01_joint_std_96d.mp3",
+          "description": "standard pathway · 96D semantic target"
+        },
+        {
+          "label": "Joint-STD-128D",
+          "model": "joint_std_128d",
+          "file": "assets/audio/en01_joint_std_128d.mp3",
+          "description": "standard pathway · 128D semantic target"
+        },
+        {
+          "label": "Joint-LeVo-64D",
+          "model": "joint_levo_64d",
+          "file": "assets/audio/en01_joint_levo_64d.mp3",
+          "description": "direct acoustic-latent flow · 64D"
+        },
+        {
+          "label": "Joint-SB-48D",
+          "model": "joint_sb_48d",
+          "file": "assets/audio/en01_joint_sb_48d.mp3",
+          "description": "interleaved semantic feedback · 48D"
+        }
+      ]
+    },
+    {
+      "id": "en02",
+      "title": "English sample 02",
+      "language": "English",
+      "prompt": "Ambient techno afroswing, metalcore, prog",
+      "lyrics": "[Verse]\nA half life is only so long\nA bad sign is how I feel now\nI wrote you my heart in a song\nDo you like how it sounds?\nSo I could leave\nAnd I would never see\nThe good I never did\nI couldn't bear to look at it\nAnd would you know my name?\n\n[Prechorus]\nWhen I'm gone\nWhen I'm gone\nWhen I'm gone\nWhen I'm gone\n\n[Chorus]\nWill they know my name?\nWill they know my name?\nWill they know my name?\nWill they know my name?\n\n[Verse 2]\nI've tried it\nI've tried it\nI've tried it all\nBut I've been too focused on myself\nWhen I should have worried about my health\nI don't wanna be here for my own death\nSo I won't\nSo I won't\nSo I won't\n\n[Chorus]\nWill they know my name?\nWill they know my name?\nWill they know my name?\nWill they know my name?\n\n[Bridge]\nI've seen it\nI've seen it\nI've seen it all\nWhat will they say when they get that call?\nAnother lost soul, another paid toll\nI don't wanna be here, I'm going through hell!\nSo I won't\nSo I won't\nSo I won't\n\n[Chorus]\nWill they know my name?\nWill they know my name?\nWill they know my name?\nWill they know my name?\n\n[Outro]\nI've had it\nI've had enough\nBut I should have focused on myself\nNo one ever worried about my health\nI don't wanna be here. There's nothing left\nSo I won't\nSo I won't\nSo I won't",
+      "methods": [
+        {
+          "label": "Discrete",
+          "model": "discrete",
+          "file": "assets/audio/en02_discrete.mp3",
+          "description": "VQ lookup baseline"
+        },
+        {
+          "label": "Joint-STD-48D",
+          "model": "joint_std_48d",
+          "file": "assets/audio/en02_joint_std_48d.mp3",
+          "description": "standard pathway · 48D semantic target"
+        },
+        {
+          "label": "Joint-STD-96D",
+          "model": "joint_std_96d",
+          "file": "assets/audio/en02_joint_std_96d.mp3",
+          "description": "standard pathway · 96D semantic target"
+        },
+        {
+          "label": "Joint-STD-128D",
+          "model": "joint_std_128d",
+          "file": "assets/audio/en02_joint_std_128d.mp3",
+          "description": "standard pathway · 128D semantic target"
+        },
+        {
+          "label": "Joint-LeVo-64D",
+          "model": "joint_levo_64d",
+          "file": "assets/audio/en02_joint_levo_64d.mp3",
+          "description": "direct acoustic-latent flow · 64D"
+        },
+        {
+          "label": "Joint-SB-48D",
+          "model": "joint_sb_48d",
+          "file": "assets/audio/en02_joint_sb_48d.mp3",
+          "description": "interleaved semantic feedback · 48D"
+        }
+      ]
+    },
+    {
+      "id": "en03",
+      "title": "English sample 03",
+      "language": "English",
+      "prompt": "rock, fast raw punk rock, late 1970s New York style, snarling male vocal, simple, punk, raw, minimal, lo-fi, vocal",
+      "lyrics": "(1–2–3–4!)\n\nVerse 1\nMet you in a dirty kitchen light\nHair up, mascara fight\nYou said “baby, don’t stay long”\nTimer blinked, already wrong\n\nPre-Chorus\nBeep beep, don’t pretend\nThis is how the story ends\n\nChorus\nTwo minutes to microwave love\nTwo minutes and we’re done\nTwo minutes to microwave love\nSpin around and burn\n\nTwo minutes to microwave love\nPlastic plate and fun\nTwo minutes to microwave love\nThen you run, run, run\n\nVerse 2\nCold inside but hot outside\nCheap romance you cannot hide\nWe kiss like we’re out of time\nGrease on lips, Valentine\n\nPre-Chorus\nDing ding, hear the sound\nHeart goes round and round\n\nChorus (repeat ossessivo)\nTwo minutes to microwave love\nTwo minutes and we’re done\nTwo minutes to microwave love\nSpin around and burn\n\nTwo minutes to microwave love\nTwo minutes, number one\nTwo minutes to microwave love\nThen you’re gone, gone, gone\n\nBridge (urlato, quasi parlato)\nDon’t touch the glass!\nIt’s too hot!\nDon’t call me back!\nWhy not?!\n\nFinal Chorus (più veloce)\nTwo minutes to microwave love\nTwo minutes and we’re done\nTwo minutes to microwave love\nBurn, baby, burn\n\nTwo minutes!\nTwo minutes!\nTwo minutes!\n\n(Crash finale secco.)",
+      "methods": [
+        {
+          "label": "Discrete",
+          "model": "discrete",
+          "file": "assets/audio/en03_discrete.mp3",
+          "description": "VQ lookup baseline"
+        },
+        {
+          "label": "Joint-STD-48D",
+          "model": "joint_std_48d",
+          "file": "assets/audio/en03_joint_std_48d.mp3",
+          "description": "standard pathway · 48D semantic target"
+        },
+        {
+          "label": "Joint-STD-96D",
+          "model": "joint_std_96d",
+          "file": "assets/audio/en03_joint_std_96d.mp3",
+          "description": "standard pathway · 96D semantic target"
+        },
+        {
+          "label": "Joint-STD-128D",
+          "model": "joint_std_128d",
+          "file": "assets/audio/en03_joint_std_128d.mp3",
+          "description": "standard pathway · 128D semantic target"
+        },
+        {
+          "label": "Joint-LeVo-64D",
+          "model": "joint_levo_64d",
+          "file": "assets/audio/en03_joint_levo_64d.mp3",
+          "description": "direct acoustic-latent flow · 64D"
+        },
+        {
+          "label": "Joint-SB-48D",
+          "model": "joint_sb_48d",
+          "file": "assets/audio/en03_joint_sb_48d.mp3",
+          "description": "interleaved semantic feedback · 48D"
+        }
+      ]
+    },
+    {
+      "id": "zh01",
+      "title": "Chinese sample 01",
+      "language": "Chinese",
+      "prompt": "Country,Latin,Cinematic",
+      "lyrics": "⸻\n《盡矣》\n【序】\n太初無聲，光自混沌生。\n一氣化陰陽，萬象循軌行。\n蒼蒼者天，悠悠者人，\n同在一息之間——\n觀天之道，始於心明。\n⸻\n【第一幕・觀天之道】\n風起東野，星垂大荒，\n我立蒼穹之下，聽萬古回響。\n日月往復無言，潮汐自有節章，\n誰能於變化中，看見永恆的光？\n山無語而高，海無聲而深，\n四時如輪，寒暑自均。\n天地不語，卻為萬物作證，\n我於靜觀之中，悟見一線真心。\n（副歌一）\n觀天之道——盈則損，虛則盈，\n損有餘而補不足，乃自然之情。\n道行於無聲，德隱於無名，\n唯有清者聽，唯有靜者明。\n⸻\n【第二幕・悟道之光】\n萬物為鏡，心影如塵，\n我見己於天，天亦在我身。\n行於無形之間，思於無念之境，\n原來大道，不遠不近，只在當下的寂靜。\n月照千江，各顯一心，\n浮世萬相，皆由心生。\n若問道在何方？\n在呼吸之間，在一念安穩。\n（副歌二）\n觀天之道——觀己之真，\n心若不動，天地自純。\n行於平常之中，見於無塵之痕，\n明者觀天，仁者觀人。\n⸻\n【第三幕・執天之行】\n手無執物，心無所著，\n以道為軸，以德為托。\n一念清明，萬念歸合，\n行於無為之中，化於無盡之樂。\n執天之行者，不逆流而上，\n但隨順而行，不離道光。\n他不爭，不競，不語不彰，\n卻在寂靜中，化育萬方。\n（副歌三）\n執天之行——柔中藏剛，\n靜裡含光，動而不忙。\n天行健，君子以自強不息，\n地勢坤，聖人以厚德載物昌。\n⸻\n【第四幕・盡矣】\n塵歸塵，土歸土，\n生滅如潮，來去皆無。\n天地悠悠，我心如初，\n一念放下，萬法皆殊途同歸。\n觀天之道已明，執天之行已成，\n無欲無求之中，聖凡一並。\n若問道之終焉？——\n盡矣。非止息，而圓滿無形。\n（終章副歌）\n觀天之道——心如大明，\n執天之行——德如長生。\n盡矣——非終非始，\n道與我同，天與人並。\n【尾聲吟】\n風息雲止，鼓聲回鳴，\n星河倒影入我心中清。\n天行不息，道化無聲，\n行道者靜，靜者成聖——盡矣。",
+      "methods": [
+        {
+          "label": "Discrete",
+          "model": "discrete",
+          "file": "assets/audio/zh01_discrete.mp3",
+          "description": "VQ lookup baseline"
+        },
+        {
+          "label": "Joint-STD-48D",
+          "model": "joint_std_48d",
+          "file": "assets/audio/zh01_joint_std_48d.mp3",
+          "description": "standard pathway · 48D semantic target"
+        },
+        {
+          "label": "Joint-STD-96D",
+          "model": "joint_std_96d",
+          "file": "assets/audio/zh01_joint_std_96d.mp3",
+          "description": "standard pathway · 96D semantic target"
+        },
+        {
+          "label": "Joint-STD-128D",
+          "model": "joint_std_128d",
+          "file": "assets/audio/zh01_joint_std_128d.mp3",
+          "description": "standard pathway · 128D semantic target"
+        },
+        {
+          "label": "Joint-LeVo-64D",
+          "model": "joint_levo_64d",
+          "file": "assets/audio/zh01_joint_levo_64d.mp3",
+          "description": "direct acoustic-latent flow · 64D"
+        },
+        {
+          "label": "Joint-SB-48D",
+          "model": "joint_sb_48d",
+          "file": "assets/audio/zh01_joint_sb_48d.mp3",
+          "description": "interleaved semantic feedback · 48D"
+        }
+      ]
+    },
+    {
+      "id": "zh02",
+      "title": "Chinese sample 02",
+      "language": "Chinese",
+      "prompt": "rap,EMO,Mandarin",
+      "lyrics": "(rap Verse 1)\n三点一线 教室宿舍食堂 循环播放\n书包压弯肩膀 试卷堆成围墙\n闹钟比鸡早 台灯熬到天亮\n公式定理单词 塞满我的眼眶\n爸妈说 为你好 未来才有方向\n老师讲 分数王道 别想其他妄想\n我像陀螺 被抽得 不停旋转晃\n钢筋水泥牢笼 锁住想象的光\n \n(Pre-Chorus)\n这台机器 转速 越来越疯狂\n按下启动键 就停不下 慌慌慌\n没有暂停键 没后退 档档档\n只剩无尽题海 加家长 期望望\n \n(Chorus)\n绑座椅 上升猛坠 没喘息\n无形线 牵重复轨迹 绕不开局\n喘不过气 喊停没资格 太窒息\n中国式教育 谁懂我心底 压抑\n齿轮咬时间 转得没缝隙 太急\n青春量化 分数博弈 输不起\n想挣脱 想逃离 现实捆羽翼 难飞起\n何时活出 专属自己 轨迹\n \n(rap Verse 2)\n兴趣爱好 被贴 不务正业的标\n发呆走神 都算 罪无可赦的燥\n成绩单上数字 定我高低坐标\n没人问我心底 真正想要的调\n奥数班 补习班 占满所有假期\n我像机器 重复 标准答案逻辑\n磨平棱角 失去个性 变得统一\n这样的成长 到底 有什么意义\n \n(Pre-Chorus)\n这台机器 转速 越来越疯狂\n按下启动键 就停不下 慌慌慌\n没有暂停键 没后退 档档档\n只剩无尽题海 加家长 期望望\n \n(Chorus)\n绑座椅 上升猛坠 没喘息\n无形线 牵重复轨迹 绕不开局\n喘不过气 喊停没资格 太窒息\n中国式教育 谁懂我心底 压抑\n齿轮咬时间 转得没缝隙 太急\n青春量化 分数博弈 输不起\n想挣脱 想逃离 现实捆羽翼 难飞起\n何时活出 专属自己 轨迹\n \n(rap Bridge)\n懂你们的爱 藏在严厉背后\n可我要的 不只是 所谓锦绣\n能不能 给点 呼吸的自由\n让我看看 书本外 另个宇宙\n分数不是全部 成长不该是囚笼\n教育该回归 本来的温柔\n别让这机器 吞噬所有 盼头\n让每个孩子 都能 快乐遨游\n \n(Chorus)\n绑座椅 上升猛坠 没喘息\n无形线 牵重复轨迹 绕不开局\n喘不过气 喊停没资格 太窒息\n中国式教育 谁懂我心底 压抑\n齿轮咬时间 转得没缝隙 太急\n青春量化 分数博弈 输不起\n想挣脱 想逃离 现实捆羽翼 难飞起\n何时活出 专属自己 轨迹\n \n(Outro)\n这运转的机器 何时能关机\n找回 真正的自己\n这紧绷的轨迹 请给我空隙\n让梦想 自由飞起",
+      "methods": [
+        {
+          "label": "Discrete",
+          "model": "discrete",
+          "file": "assets/audio/zh02_discrete.mp3",
+          "description": "VQ lookup baseline"
+        },
+        {
+          "label": "Joint-STD-48D",
+          "model": "joint_std_48d",
+          "file": "assets/audio/zh02_joint_std_48d.mp3",
+          "description": "standard pathway · 48D semantic target"
+        },
+        {
+          "label": "Joint-STD-96D",
+          "model": "joint_std_96d",
+          "file": "assets/audio/zh02_joint_std_96d.mp3",
+          "description": "standard pathway · 96D semantic target"
+        },
+        {
+          "label": "Joint-STD-128D",
+          "model": "joint_std_128d",
+          "file": "assets/audio/zh02_joint_std_128d.mp3",
+          "description": "standard pathway · 128D semantic target"
+        },
+        {
+          "label": "Joint-LeVo-64D",
+          "model": "joint_levo_64d",
+          "file": "assets/audio/zh02_joint_levo_64d.mp3",
+          "description": "direct acoustic-latent flow · 64D"
+        },
+        {
+          "label": "Joint-SB-48D",
+          "model": "joint_sb_48d",
+          "file": "assets/audio/zh02_joint_sb_48d.mp3",
+          "description": "interleaved semantic feedback · 48D"
+        }
+      ]
+    },
+    {
+      "id": "zh03",
+      "title": "Chinese sample 03",
+      "language": "Chinese",
+      "prompt": "Country Pop, fingerstyle acoustic guitar, soft piano, swelling electric guitar, nostalgic, heartfelt, building intensity, moderate tempo with driving beat in chorus, warm male vocals, intimate production with cinematic lift",
+      "lyrics": "[Intro: Fingerstyle acoustic guitar with distant rain sounds]\n\n[Verse 1]\n雨滴在窗上 画着弯弯的线\n像田埂蜿蜒 绕过山那边\n我数着水痕 一道又一道\n忽然看见你 弯腰在水田\n\n[Verse 2]\n晨光刚爬上 第三级石阶\n你赤脚踩进 春天的边界\n一株青秧苗 一捧清冽水\n种下我名字 在泥里安睡\n\n[Chorus: Full band with driving drums and swelling electric guitar]\n家乡的梯田 一直在我心上\n不是风景 是我心跳的形状\n风吹过山梁 稻浪翻涌成浪\n那是我血脉里 最深的回响\n\n[Inst: Electric guitar sustains, piano echoes motif]\n\n[Verse 3]\n行李箱轮子 碾过多少街\n霓虹再亮也 照不暖长夜\n可只要闭眼 听雨落屋檐\n就回到那片 金黄的田间\n\n[Chorus: Full band with layered vocals]\n家乡的梯田 一直在我心上\n不是风景 是我心跳的形状\n风吹过山梁 稻浪翻涌成浪\n那是我血脉里 最深的回响\n\n[Bridge: Strings and minimal bass, vocals intimate]\n如今我蹲下 捧起异乡土\n却闻到稻花 香在指缝住\n原来走得再远 脚印都朝向\n那片弯弯的 永恒的田垄\n\n[Chorus: Full intensity, powerful drums and soaring electric guitar]\n家乡的梯田 一直在我心上\n不是风景 是我心跳的形状\n风吹过山梁 稻浪翻涌成浪\n那是我血脉里 最深的回响\n\n[Outro: Acoustic guitar returns, rain fades softly]\n弯弯的田垄啊\n一直在我心上……",
+      "methods": [
+        {
+          "label": "Discrete",
+          "model": "discrete",
+          "file": "assets/audio/zh03_discrete.mp3",
+          "description": "VQ lookup baseline"
+        },
+        {
+          "label": "Joint-STD-48D",
+          "model": "joint_std_48d",
+          "file": "assets/audio/zh03_joint_std_48d.mp3",
+          "description": "standard pathway · 48D semantic target"
+        },
+        {
+          "label": "Joint-STD-96D",
+          "model": "joint_std_96d",
+          "file": "assets/audio/zh03_joint_std_96d.mp3",
+          "description": "standard pathway · 96D semantic target"
+        },
+        {
+          "label": "Joint-STD-128D",
+          "model": "joint_std_128d",
+          "file": "assets/audio/zh03_joint_std_128d.mp3",
+          "description": "standard pathway · 128D semantic target"
+        },
+        {
+          "label": "Joint-LeVo-64D",
+          "model": "joint_levo_64d",
+          "file": "assets/audio/zh03_joint_levo_64d.mp3",
+          "description": "direct acoustic-latent flow · 64D"
+        },
+        {
+          "label": "Joint-SB-48D",
+          "model": "joint_sb_48d",
+          "file": "assets/audio/zh03_joint_sb_48d.mp3",
+          "description": "interleaved semantic feedback · 48D"
+        }
+      ]
+    }
+  ]
+}
